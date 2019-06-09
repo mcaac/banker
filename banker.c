@@ -7,12 +7,12 @@
 
 
 int verificarArquivo(FILE *fp, char *str);
-void *initCliente(cliente c, int rec);
+void *initCliente(int idCliente);
 int gerarRandom(int max);
-int *gerarRecursos(int max);
-int verificarRecursos(int solicitados, int disponivel);
-void *pegarRecurso(int solicitados, int recursos);
-void *liberarRecurso(int solicitados, int recursos);
+void *gerarRecursos(int id);
+int verificarRecursos(int id);
+void *pegarRecurso(int id);
+void *liberarRecurso(int id);
 
 int Available[]; // Quantidade de recursos disponíveis de cada tipo
 int Max[][]; // Quantidade máxima de recursos que um cliente pode pedir

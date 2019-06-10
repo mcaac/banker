@@ -42,12 +42,12 @@ int main(int argc, const char * argv[]) {
     pthread_t threads[num]; // cria o vetor de threads de acordo com o número de linhas
     pthread_attr_t attr;
     pthread_attr_init(&attr);
-    cliente clientes[5];
+
  
     for (int i = 0; i < num; i++) {
         pthread_create(&threads[i], &attr, initCliente(num), argv[1]);
     }
-                       sleep(50);
+   
     return 0;
 }
 
